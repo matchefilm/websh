@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSH导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .intro {
+            padding: 1rem;
+            background: #f8f9fa;
+            margin: 1rem 0;
+        }
+
+        .project-links, .friend-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+
+        .project-links a, .friend-links a {
+            color: #000;
+            text-decoration: none;
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #f1f1f1;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .project-links a:hover, .friend-links a:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* 联系方式样式 */
+        .contact-info {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            margin: 1rem 0;
+        }
+
+        /* 调整响应式 */
+        @media (max-width: 768px) {
+            .project-links, .friend-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-links a, .friend-links a {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+                margin: 0.5rem 0;
+            }
+        }
+
+        /* 滚动到顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WebSH导航主页</h1>
+    </header>
+
+    <nav class="container">
+        <h2>相关项目链接</h2>
+        <div class="project-links">
+            <a href="https://love.websh.us.kg/">无限的爱送给你づ❤️ど</a>
+            <a href="https://api.websh.us.kg/">WebSH API</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="intro">
+            <h2>介绍</h2>
+            <p>WebSH导航是一个普普通通的网站，专注于为你提供导航服务。</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="friend-links">
+            <h2>网站底部友情链接</h2>
+            <a href="#">预留项1</a>
+            <a href="#">预留项2</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <p>联系方式：3469545233@qq.com</p>
+        </div>
+        <p>&copy; 2025 matchefilm</p>
+    </footer>
+
+    <button class="back-to-top">↑</button>
+
+    <script>
+        // 滚动到顶部
+        window.onscroll = function() {
+            var backToTop = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        };
+
+        var backToTop = document.querySelector('.back-to-top');
+        backToTop.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+    </script>
+</body>
+</html>
